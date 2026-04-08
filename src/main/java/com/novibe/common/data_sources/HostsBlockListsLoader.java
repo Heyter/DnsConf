@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.function.Predicate;
 
 @Service
-public class  HostsBlockListsLoader extends ListLoader<String> {
+public class HostsBlockListsLoader extends ListLoader<String> {
 
-    private static final String[] BLOCK_PREFIXES = { "0.0.0.0 ", "127.0.0.1 ", "::1 "};
+    private static final String[] BLOCK_PREFIXES = {"0.0.0.0 ", "127.0.0.1 ", "::1 "};
     private static final String[] LOCALHOST_NAME = {"localhost", "ip6-localhost"};
 
     @Override

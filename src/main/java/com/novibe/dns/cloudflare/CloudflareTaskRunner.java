@@ -35,8 +35,8 @@ public class CloudflareTaskRunner implements DnsTaskRunner {
 
         Log.global("CLOUDFLARE");
         Log.common("""
-        Script behaviour: previously generated data is always about to be removed.
-        If you want to clear Cloudflare BLOCK/REDIRECT settings, launch this script without providing sources to related environment variables.""");
+                Script behaviour: previously generated data is always about to be removed.
+                If you want to clear Cloudflare BLOCK/REDIRECT settings, launch this script without providing sources to related environment variables.""");
 
         List<String> blocks = blockListsLoader.fetchWebsites(EnvParser.parse(BLOCK));
         List<BypassRoute> overrides = overrideListsLoader.fetchWebsites(EnvParser.parse(REDIRECT));

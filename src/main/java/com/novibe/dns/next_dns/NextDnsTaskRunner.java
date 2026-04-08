@@ -31,11 +31,11 @@ public class NextDnsTaskRunner implements DnsTaskRunner {
 
         Log.global("NextDNS");
         Log.common("""
-        Script behaviour: old BLOCK/REDIRECT settings are about to be updated via provided BLOCK/REDIRECT sources.
-        - if no sources provided, then all NextDNS settings will be removed.
-        - if provided only one type of sources, related settings will be updated; another type remain untouched.
-        - if IGNORE_REDIRECT domains provided, they will affect both existing and new redirect rules.
-        NextDNS api rate limiter reset config: 60 seconds after the last request""");
+                Script behaviour: old BLOCK/REDIRECT settings are about to be updated via provided BLOCK/REDIRECT sources.
+                - if no sources provided, then all NextDNS settings will be removed.
+                - if provided only one type of sources, related settings will be updated; another type remain untouched.
+                - if IGNORE_REDIRECT domains provided, they will affect both existing and new redirect rules.
+                NextDNS api rate limiter reset config: 60 seconds after the last request""");
 
         List<String> blockSources = EnvParser.parse(BLOCK);
         if (!blockSources.isEmpty()) {
